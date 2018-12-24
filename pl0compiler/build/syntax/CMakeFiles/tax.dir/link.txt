@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtax.a  CMakeFiles/tax.dir/pl0_tax.c.o
+/usr/bin/ranlib libtax.a

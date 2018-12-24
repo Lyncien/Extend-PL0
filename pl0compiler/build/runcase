@@ -1,0 +1,40 @@
+#!/bin/bash
+debugdir="debug"
+tmpdir=`mktemp -d`
+testdir="testcase"
+data="testdata"
+VM="VM"
+PL0="PL0"
+debug=$1
+
+if [ -d $debugdir ]; then
+  rm -r $debugdir
+fi
+mkdir $tmpdir/$debugdir
+mkdir $tmpdir/$debugdir/asm
+mkdir $tmpdir/$debugdir/out
+tar -xzf $data -C $tmpdir
+
+score=0
+echo "" > $tmpdir/$debugdir/result.txt
+for file in $tmpdir/$testdir/*/code*
+do
+  echo "----------------------------------------------------------------------------------------" >> $tmpdir/$debugdir/result.txt
+  id=${file##*code}
+  id=${id%.txt*}
+  echo "Case: code"$id >> $tmpdir/$debugdir/result.txt
+  ./$PL0 $file $tmpdir/$debugdir/asm/asm$id.txt
+  python $tmpdir/$VM $tmpdir/$debugdir/asm/asm$id.txt >> $tmpdir/$debugdir/out/out$id.txt
+  
+  path=${file%/*}
+  diff $path/out$id.txt $tmpdir/$debugdir/out/out$id.txt >> $tmpdir/$debugdir/result.txt
+  rc=$?
+  [ $rc -eq 0 ] && [[ $file =~ "beginner" ]] && ((score=$score+2))
+  [ $rc -eq 0 ] && [[ $file =~ "median" ]] && ((score=$score+4))
+  [ $rc -eq 0 ] && [[ $file =~ "challenged" ]] && ((score=$score+6))
+  [ $rc -eq 0 ] && [[ $file =~ "advanced" ]] && ((score=$score+8))
+done
+echo RESULT: "[ " $score " / 100 ]"
+
+[[ $debug =~ "debug" ]] && cp -r $tmpdir/$debugdir ./
+rm -r $tmpdir

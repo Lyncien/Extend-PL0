@@ -1,0 +1,15 @@
+/home/lin/pl0compiler/build/CMakeFiles/edit_cache.dir
+/home/lin/pl0compiler/build/CMakeFiles/rebuild_cache.dir
+/home/lin/pl0compiler/build/CMakeFiles/PL0.dir
+/home/lin/pl0compiler/build/lex/CMakeFiles/edit_cache.dir
+/home/lin/pl0compiler/build/lex/CMakeFiles/rebuild_cache.dir
+/home/lin/pl0compiler/build/lex/CMakeFiles/lex.dir
+/home/lin/pl0compiler/build/common/CMakeFiles/edit_cache.dir
+/home/lin/pl0compiler/build/common/CMakeFiles/rebuild_cache.dir
+/home/lin/pl0compiler/build/common/CMakeFiles/common.dir
+/home/lin/pl0compiler/build/syntax/CMakeFiles/edit_cache.dir
+/home/lin/pl0compiler/build/syntax/CMakeFiles/rebuild_cache.dir
+/home/lin/pl0compiler/build/syntax/CMakeFiles/tax.dir
+/home/lin/pl0compiler/build/error/CMakeFiles/edit_cache.dir
+/home/lin/pl0compiler/build/error/CMakeFiles/rebuild_cache.dir
+/home/lin/pl0compiler/build/error/CMakeFiles/error.dir

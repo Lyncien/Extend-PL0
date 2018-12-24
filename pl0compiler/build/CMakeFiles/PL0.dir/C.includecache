@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lin/pl0compiler/common/common.h
+stdio.h
+-
+
+/home/lin/pl0compiler/lex/pl0_lex.h
+
+/home/lin/pl0compiler/syntax/pl0_tax.h
+
+/home/lin/pl0compiler/test.c
+stdio.h
+-
+stdlib.h
+-
+assert.h
+-
+common/common.h
+/home/lin/pl0compiler/common/common.h
+lex/pl0_lex.h
+/home/lin/pl0compiler/lex/pl0_lex.h
+syntax/pl0_tax.h
+/home/lin/pl0compiler/syntax/pl0_tax.h
+

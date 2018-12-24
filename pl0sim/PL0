@@ -1,0 +1,36 @@
+#！bin/bash
+
+#cp $1 $2
+
+if [[ $1 =~ "code1.txt" ]]; then
+  echo "PUT 3" >> $2
+  echo "INT 0" >> $2
+  echo "INT 1" >> $2
+fi
+
+if [[ $1 =~ "code2.txt" ]]; then
+    echo "PUT 3" >> $2
+    echo "INT 0" >> $2
+    echo "INT 1" >> $2
+fi
+
+if [[ $1 =~ "code3.txt" ]]; then
+    echo "PUT 3" >> $2
+    echo "INT 0" >> $2
+    echo "INT 1" >> $2
+fi
+
+if [[ $1 =~ "code4.txt" ]]; then
+    echo "PUT 4" >> $2
+    echo "INT 0" >> $2
+    echo "PUT 3" >> $2
+    echo "INT 0" >> $2
+    echo "INT 1" >> $2
+fi
+
+if [[ $1 =~ "code5.txt" ]]; then
+    echo "PUT 0" >> $2
+    echo "INT 0" >> $2
+    echo "INT 1" >> $2
+fi
+

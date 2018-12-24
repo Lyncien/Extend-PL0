@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lin/pl0compiler/error/pl0_error.c
+pl0_error.h
+/home/lin/pl0compiler/error/pl0_error.h
+
+/home/lin/pl0compiler/error/pl0_error.h
+stdio.h
+-
+
